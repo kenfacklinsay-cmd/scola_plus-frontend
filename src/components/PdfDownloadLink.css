@@ -1,0 +1,28 @@
+.pdf-download-action {
+  display: inline-grid;
+  justify-items: start;
+  gap: 5px;
+  max-width: 100%;
+}
+
+.pdf-download-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pdf-download-button:disabled {
+  opacity: .65;
+  cursor: progress;
+}
+
+.pdf-download-error {
+  max-width: 280px;
+  color: #b42318;
+  font-size: 11px;
+  line-height: 1.4;
+}

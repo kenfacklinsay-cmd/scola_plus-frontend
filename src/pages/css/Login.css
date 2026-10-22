@@ -69,13 +69,19 @@
 .login-right .sub{ color:#64748B; font-size:12px; margin-bottom:22px; }
 .login-right label{ font-size:9px; letter-spacing:1px; color:#64748B; font-weight:700; display:block; margin-top:16px; }
 .label-row{ display:flex; justify-content:space-between; align-items:center; }
-.label-row a{ font-size:10px; color:#E6A044; text-decoration:none; }
+.forgot-password-link{ color:#3157bf; font-size:11px; text-decoration:none; }
+.forgot-password-link:hover{ text-decoration:underline; }
 .login-right input{ width:100%; padding:12px; border:1px solid #E2E8F0; border-radius:10px; margin-top:6px; font-size:13px; box-sizing:border-box; }
 .pass-wrap{ position:relative; }
-.pass-wrap svg{ position:absolute; right:12px; top:16px; color:#94A3B8; }
-.btn-login{ width:100%; background:#0F2342; color:white; border:0; padding:13px; border-radius:10px; margin-top:20px; font-weight:600; }
-.demo-box{ background:#FFFBF0; border:1px solid #FDE8C0; border-radius:10px; padding:14px; margin-top:22px; font-size:11px; }
-.demo-box strong{ font-size:12px; color:#0F2342; }
-.demo-box p{ color:#64748B; margin:6px 0; line-height:1.4; }
-.demo-box span{ background:white; border:1px solid #FDE8C0; padding:4px 8px; border-radius:999px; font-size:10px; }
+.pass-wrap input{ padding-right:42px; }
+.password-toggle{ position:absolute; right:10px; top:14px; color:#94A3B8; background:none; border:0; padding:4px; cursor:pointer; }
+.btn-login{ width:100%; background:#0F2342; color:white; border:0; padding:13px; border-radius:10px; margin-top:20px; font-weight:600; cursor:pointer; }
+.btn-login:disabled{ cursor:wait; opacity:0.7; }
+.login-message{ font-size:12px; margin-top:14px; line-height:1.5; }
+.login-message.error{ color:#b42318; }
+.login-message.success{ color:#157347; }
+.password-recovery-card{ max-width:520px; }
+.password-recovery-card .login-right{ width:100%; }
+.password-recovery-help{ margin-top:18px; color:#64748B; font-size:12px; line-height:1.5; }
+.password-recovery-submit{ display:inline-flex; justify-content:center; width:100%; box-sizing:border-box; margin-top:16px; padding:13px; border-radius:10px; background:#0F2342; color:white; font-size:13px; font-weight:600; text-decoration:none; }
 @media(max-width:800px){ .login-card{flex-direction:column} .login-left,.login-right{width:100%} }

@@ -1,0 +1,1228 @@
+.role-dashboard {
+  min-height: 100vh;
+  background: #f5f3fc;
+  color: #263653;
+}
+
+.role-dashboard-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.role-dashboard-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 14px;
+  border-right: 1px solid #e8eaf0;
+  background: #1d2f54;
+  color: #fff;
+}
+
+.role-dashboard-nav-title {
+  margin: 33px 10px 12px;
+  color: #aab7cf;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.role-dashboard-sidebar nav {
+  display: grid;
+  gap: 5px;
+}
+
+.role-dashboard-nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #d4deed;
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.role-dashboard-nav-link:hover,
+.role-dashboard-nav-link.active {
+  background: rgb(255 255 255 / 12%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.role-dashboard-sidebar-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 14px 3px 3px;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+}
+
+.role-dashboard-sidebar-avatar {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9a648;
+  color: #172746;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.role-dashboard-sidebar-name {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  flex: 1;
+  color: #fff;
+  font-size: 11px;
+}
+
+.role-dashboard-sidebar-name strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.role-dashboard-sidebar-name span {
+  color: #aab7cf;
+  font-size: 10px;
+}
+
+.role-dashboard-sidebar-account button {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.role-dashboard-sidebar-account button:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.role-dashboard-main {
+  min-width: 0;
+}
+
+.role-dashboard-header {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 clamp(20px, 4vw, 54px);
+  background: #fff;
+  color: #263653;
+  box-shadow: 0 2px 10px rgb(31 43 72 / 4%);
+}
+
+.role-dashboard-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.role-dashboard-brand > span {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #e9a648;
+  color: #172746;
+}
+
+.role-dashboard-header-context {
+  display: grid;
+  gap: 3px;
+}
+
+.role-dashboard-header-context strong {
+  color: #27344d;
+  font-size: 14px;
+}
+
+.role-dashboard-header-context span {
+  color: #999fb2;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.role-dashboard-account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #d4deed;
+  font-size: 13px;
+}
+
+.role-dashboard-account button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.role-dashboard-account button:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.role-dashboard-content {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 32px clamp(20px, 3vw, 42px) 64px;
+}
+
+.role-dashboard-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.role-dashboard-eyebrow {
+  margin: 0 0 8px;
+  color: #b5782f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.role-dashboard-heading h1 {
+  margin: 0;
+  color: #1f2e4d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 36px);
+}
+
+.role-dashboard-heading > div > p:last-child {
+  margin: 8px 0 0;
+  color: #777f96;
+  font-size: 14px;
+}
+
+.role-dashboard-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.role-dashboard-toolbar label {
+  min-width: 180px;
+  display: grid;
+  gap: 5px;
+  color: #68768d;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.role-dashboard-toolbar select {
+  min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #203452;
+  font: inherit;
+}
+
+.role-dashboard-action {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #1d2f54;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.role-dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.role-dashboard-card,
+.role-dashboard-panel {
+  min-width: 0;
+  border: 1px solid #e8eaf0;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgb(31 43 72 / 3%);
+}
+
+.role-dashboard-card {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.role-dashboard-card strong {
+  overflow: hidden;
+  color: #253653;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 3vw, 29px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.role-dashboard-card span {
+  color: #7d879b;
+  font-size: 12px;
+}
+
+.role-dashboard-panel {
+  margin-top: 18px;
+  padding: 18px 20px;
+}
+
+.role-dashboard-panel h2,
+.role-parent-child-heading h2 {
+  margin: 0 0 14px;
+  color: #273653;
+  font-size: 16px;
+}
+
+.role-dashboard-table-wrap {
+  overflow-x: auto;
+}
+
+.role-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.role-dashboard-table th,
+.role-dashboard-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f1f5;
+  color: #5f6b82;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.role-dashboard-table th {
+  background: #fafaff;
+  color: #7b8499;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+.role-dashboard-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.role-dashboard-table td:first-child {
+  color: #2d3a55;
+  font-weight: 700;
+}
+
+.role-dashboard-document-link {
+  color: #3157bf;
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.role-dashboard-document-link:hover {
+  text-decoration: underline;
+}
+
+.teacher-attendance-status,
+.teacher-attendance-notes {
+  min-width: 150px;
+  padding: 8px 10px;
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  background: #fff;
+  color: #263653;
+  font: inherit;
+  font-size: 12px;
+}
+
+.teacher-attendance-notes {
+  min-width: 210px;
+}
+
+.parent-notification-list {
+  display: grid;
+  gap: 10px;
+}
+
+.parent-notification-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e9f1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.parent-notification-item.unread {
+  border-color: #f1d08e;
+  background: #fffaf0;
+}
+
+.parent-notification-item h3 {
+  margin: 0 0 5px;
+  color: #203452;
+  font-size: 14px;
+}
+
+.parent-notification-item p,
+.parent-notification-item small {
+  display: block;
+  margin: 4px 0;
+  color: #77849a;
+  font-size: 12px;
+}
+
+.parent-notification-item button {
+  align-self: center;
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  background: #fff;
+  color: #3157bf;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accounting-payment-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.accounting-payment-cta h2 {
+  margin: 0 0 5px;
+}
+
+.accounting-payment-cta p {
+  margin: 0;
+  color: #7d879b;
+  font-size: 12px;
+}
+
+.accounting-payment-cta button {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.record-payment-panel {
+  border-color: #e3e8f1;
+}
+
+.record-payment-heading {
+  margin-bottom: 16px;
+}
+
+.record-payment-heading h2 {
+  margin: 0 0 5px;
+}
+
+.record-payment-heading p {
+  margin: 0;
+  color: #7d879b;
+  font-size: 12px;
+}
+
+.record-payment-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+}
+
+.record-payment-form > label {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+  color: #52637b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.record-payment-form input,
+.record-payment-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #203452;
+  font: inherit;
+  font-size: 12px;
+}
+
+.record-payment-form input:focus,
+.record-payment-form select:focus {
+  outline: 2px solid rgb(49 87 191 / 20%);
+  border-color: #3157bf;
+}
+
+.record-payment-form select:disabled,
+.record-payment-form input:disabled {
+  background: #f5f6f8;
+  color: #8994a6;
+  cursor: not-allowed;
+}
+
+.record-payment-student-search {
+  grid-column: 1 / -1;
+}
+
+.record-payment-search-field {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #8994a6;
+}
+
+.record-payment-search-field input {
+  min-height: 38px;
+  padding: 5px 0;
+  border: 0;
+  outline: 0;
+}
+
+.record-payment-form small {
+  color: #7d879b;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.record-payment-balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #dce9e2;
+  border-radius: 8px;
+  background: #f4fbf7;
+  color: #60766c;
+  font-size: 11px;
+}
+
+.record-payment-balance strong {
+  color: #176b4b;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.record-payment-hint,
+.record-payment-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 12px;
+}
+
+.record-payment-hint {
+  color: #78839a;
+}
+
+.record-payment-error {
+  margin-bottom: 14px;
+  color: #a93226;
+}
+
+.record-payment-submit {
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.record-payment-submit:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.record-payment-receipt {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+  color: #176b4b;
+  font-weight: 750;
+  text-decoration: underline;
+}
+
+.parent-children-heading {
+  margin: 0 0 12px;
+}
+
+.parent-children-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #1d2f54;
+  font-size: 18px;
+}
+
+.parent-children-heading h2 span {
+  display: inline-grid;
+  min-width: 24px;
+  height: 24px;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 12px;
+  background: #edf2fa;
+  color: #486080;
+  font-size: 12px;
+}
+
+.parent-children-heading p {
+  margin: 5px 0 0;
+  color: #77849a;
+  font-size: 13px;
+}
+
+.parent-child-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  padding: 2px 2px 12px;
+}
+
+.parent-child-chip {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 15px;
+  border: 1px solid #dfe5ef;
+  border-radius: 13px;
+  background: #fff;
+  color: #263653;
+  text-align: left;
+  cursor: pointer;
+}
+
+.parent-child-chip.active {
+  border-color: #1d2f54;
+  background: #1d2f54;
+  color: #fff;
+  box-shadow: 0 5px 12px rgb(29 47 84 / 15%);
+}
+
+.parent-child-chip-avatar {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff0d7;
+  color: #a76819;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.parent-child-chip > span:last-child {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.parent-child-chip strong,
+.parent-child-chip small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.parent-child-chip strong {
+  font-size: 12px;
+}
+
+.parent-child-chip small {
+  color: #8995aa;
+  font-size: 10px;
+}
+
+.parent-child-chip.active small {
+  color: #d0d8e7;
+}
+
+.parent-overview-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 6px 0 16px;
+}
+
+.parent-overview-toolbar label {
+  min-width: 180px;
+  display: grid;
+  gap: 5px;
+  color: #68768d;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.parent-overview-toolbar select {
+  min-height: 39px;
+  padding: 8px 11px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #203452;
+  font: inherit;
+}
+
+.parent-overview-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.parent-overview-card {
+  min-width: 0;
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 19px 21px;
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.parent-overview-card > span {
+  color: #8794aa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .45px;
+  text-transform: uppercase;
+}
+
+.parent-overview-card > strong {
+  color: #253653;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 3vw, 36px);
+  line-height: 1.1;
+}
+
+.parent-overview-card > small {
+  color: #8995aa;
+  font-size: 11px;
+}
+
+.parent-overview-card > em {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #eaf0ff;
+  color: #3767ce;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.parent-overview-finance {
+  border-color: #f6e8bd;
+  background: #fffbec;
+}
+
+.parent-overview-finance > span,
+.parent-overview-finance > strong {
+  color: #bb6908;
+}
+
+.parent-payment-progress {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #f0e8d4;
+}
+
+.parent-payment-progress span {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: #f29a00;
+  transition: width .2s ease;
+}
+
+.parent-content-tabs {
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  margin: 0 0 14px;
+  padding: 4px;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.parent-content-tabs button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #74819a;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.parent-content-tabs button.active {
+  background: #1d2f54;
+  color: #fff;
+}
+
+.parent-data-panel {
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.parent-data-heading {
+  padding: 19px 22px 16px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.parent-data-heading h2 {
+  margin: 0;
+  color: #273653;
+  font-size: 16px;
+}
+
+.parent-data-heading p {
+  margin: 6px 0 0;
+  color: #8995aa;
+  font-size: 11px;
+}
+
+.parent-grades-table td:nth-child(2) {
+  text-align: center;
+}
+
+.parent-grade-pill {
+  display: inline-flex;
+  margin: 2px 5px 2px 0;
+  padding: 4px 7px;
+  border-radius: 6px;
+  background: #f4f6fa;
+  color: #53637d;
+  font-size: 10px;
+}
+
+.parent-grade-average {
+  color: #315fcb !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.parent-bulletin-list {
+  display: grid;
+  padding: 0 20px;
+}
+
+.parent-bulletin-row {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid #f0f1f5;
+}
+
+.parent-bulletin-row:last-child {
+  border-bottom: 0;
+}
+
+.parent-bulletin-row > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.parent-bulletin-row strong {
+  color: #33435f;
+  font-size: 12px;
+}
+
+.parent-bulletin-row span {
+  color: #8791a6;
+  font-size: 10px;
+}
+
+.parent-bulletin-row > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.parent-data-panel > .role-dashboard-state,
+.parent-data-panel > .role-dashboard-error {
+  margin: 0;
+  padding: 20px;
+}
+
+.role-dashboard-state {
+  padding: 18px 4px;
+  color: #78839a;
+  font-size: 13px;
+}
+
+.role-dashboard-error {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #f1c6c3;
+  border-radius: 9px;
+  background: #fff1f0;
+  color: #a93226;
+  font-size: 13px;
+}
+
+.role-dashboard-error button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.role-dashboard-success {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #c8ead9;
+  border-radius: 9px;
+  background: #effbf5;
+  color: #176b4b;
+  font-size: 13px;
+}
+
+.teacher-assessment-form {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(150px, .7fr) auto;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.teacher-assessment-form label {
+  display: grid;
+  gap: 5px;
+  color: #68768d;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.teacher-assessment-form input,
+.teacher-grade-input,
+.teacher-appreciation-input,
+.teacher-grade-toolbar select {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #203452;
+  font: inherit;
+}
+
+.teacher-grade-input {
+  width: 92px;
+}
+
+.teacher-appreciation-input {
+  width: min(100%, 260px);
+}
+
+.teacher-grade-hint {
+  margin: 12px 0;
+  color: #78839a;
+  font-size: 12px;
+}
+
+.role-dashboard-assessment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-dashboard-assessment-list button {
+  display: grid;
+  gap: 4px;
+  padding: 9px 12px;
+  border: 1px solid #e3e8f1;
+  border-radius: 8px;
+  background: #fff;
+  color: #4d5e78;
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.role-dashboard-assessment-list button.active {
+  border-color: #3157bf;
+  background: #f1f5ff;
+  color: #24488e;
+}
+
+.role-dashboard-assessment-list small {
+  color: #8792a5;
+}
+
+.role-parent-child-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.role-parent-child-heading h2 {
+  margin-bottom: 5px;
+}
+
+.role-parent-child-heading p {
+  margin: 0;
+  color: #7d879b;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .role-dashboard-shell {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .parent-overview-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .role-dashboard-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-assessment-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-assessment-form button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .role-dashboard-shell {
+    display: block;
+  }
+
+  .role-dashboard-sidebar {
+    position: static;
+    height: auto;
+    padding: 12px 14px 9px;
+  }
+
+  .role-dashboard-brand {
+    margin-bottom: 10px;
+  }
+
+  .role-dashboard-nav-title,
+  .role-dashboard-sidebar-account {
+    display: none;
+  }
+
+  .role-dashboard-sidebar nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+  }
+
+  .role-dashboard-nav-link {
+    min-height: 38px;
+    flex: 0 0 auto;
+    gap: 7px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .role-dashboard-nav-link svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .role-dashboard-header {
+    min-height: 60px;
+    padding: 0 16px;
+  }
+
+  .role-dashboard-account > span {
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .role-dashboard-content {
+    width: 100%;
+    padding: 26px 14px 48px;
+  }
+
+  .parent-overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .parent-overview-toolbar {
+    flex-direction: column;
+  }
+
+  .parent-overview-toolbar label {
+    min-width: 0;
+  }
+
+  .parent-child-chip {
+    min-width: 195px;
+  }
+
+  .parent-data-heading {
+    padding: 16px;
+  }
+
+  .parent-bulletin-row {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 13px 0;
+  }
+
+  .role-dashboard-shell-with-nav {
+    display: block;
+  }
+
+  .role-dashboard-sidebar {
+    padding: 10px 14px;
+    border-right: 0;
+    border-bottom: 1px solid #e8eaf0;
+  }
+
+  .role-dashboard-sidebar nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+  }
+
+  .role-dashboard-sidebar button {
+    flex: 0 0 auto;
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .role-dashboard-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .teacher-assessment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .record-payment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .record-payment-student-search,
+  .record-payment-hint,
+  .record-payment-error {
+    grid-column: auto;
+  }
+
+  .record-payment-receipt {
+    margin: 8px 0 0;
+  }
+
+  .teacher-assessment-form button {
+    grid-column: auto;
+  }
+
+  .role-dashboard-toolbar label {
+    min-width: 0;
+  }
+
+  .role-dashboard-metrics {
+    gap: 10px;
+  }
+
+  .role-dashboard-card {
+    padding: 15px;
+  }
+
+  .role-dashboard-panel {
+    padding: 15px;
+  }
+
+  .accounting-payment-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
